@@ -63,131 +63,164 @@
     <!-- Contenido principal -->
     <main>
 
+        <!-- Sección 1: Buscador de noticias -->
         <div class="container mt-5 mb-3">
-            <p class="display-4 text-center">Buscar noticias</p>
+            <h1 class="text-center">Buscar noticias</h1>
         </div>
     
-        <hr class="featurette-divider">
+        <div class="container dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Elemento 1</a></li>
+              <li><a class="dropdown-item" href="#">Elemento 2</a></li>
+              <li><a class="dropdown-item" href="#">Elemento 3</a></li>
+            </ul>
 
-    <div class="container mt-5 mb-3">
-        <p class="display-4 text-center">Noticias destacadas</p>
-    </div>
-
-    <!-- Carrusel -->
-    <div id="CarruselNoticias" class="carousel slide mt-5" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
-
-        <!-- Elementos carrusel -->    
-        <div class="carousel-item active">
-            <img class="bd-placeholder-img"  src="img/slider1.jpg" alt="">        
-            <div class="container">
-            <div class="carousel-caption text-start">
-                <h1>CASOS DE COVID AUMENTAN EXPLOSIVAMENTE</h1>
-                <p>Según la OMS, hasta el 70% de la población mundial podría estar a punto de morir por COVID-21.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-            </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <img class="bd-placeholder-img"  src="img/slider1.jpg" alt="">        
-            <div class="container">
-            <div class="carousel-caption text-start">
-                <h1>CASOS DE COVID AUMENTAN EXPLOSIVAMENTE</h1>
-                <p>Según la OMS, hasta el 70% de la población mundial podría estar a punto de morir por COVID-21.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-            </div>
-            </div>
-        </div>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Periodista
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Periodista 1</a></li>
+                <li><a class="dropdown-item" href="#">Periodista 2</a></li>
+                <li><a class="dropdown-item" href="#">Periodista 3</a></li>
+              </ul>
 
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#CarruselNoticias" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#CarruselNoticias" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <hr class="featurette-divider"> <!-- Separador de secciones -->
 
-    <!-- Footer -->
-    <footer class="container">
+        <!-- Sección 2: Noticias destacadas -->
+        <div class="container mt-5 mb-3">
+            <h1 class="text-center">Noticias destacadas</h1>
+        </div>
 
-        <div class="container pt-3">
-            <div class="row">
+        <!-- Carrusel -->
+        <div id="CarruselNoticias" class="carousel slide mt-5" data-bs-ride="carousel">
 
-                <!-- Columna 1 -->
-                <div class="col-5 pe-5">
+            <!-- Indicadores de carrusel -->
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Noticia 1"></button>
+            <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="1" aria-label="Noticia 2"></button>
+            </div>
 
-                    <!-- Descripción about -->
-                    <div class="row">
-                        <div class="col-1">
-                            <img src="img/logo.png" alt="" width="30" height="24">
-                        </div>
-                        <div class="col">
-                            <h3>Caos News</h3>
-                        </div>  
+            <!-- Contenido del carrusel -->
+            <div class="carousel-inner">
+
+                <!-- Elementos carrusel -->    
+                <div class="carousel-item active">
+                    <img class="bd-placeholder-img"  src="img/slider1.jpg" alt="">        
+                    <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>CASOS DE COVID AUMENTAN EXPLOSIVAMENTE</h1>
+                        <p>Según la OMS, hasta el 70% de la población mundial podría estar a punto de morir por COVID-21.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Leer más...</a></p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda aliquid maxime temporibus quae.</p>
-                
-                    <!-- Iconos sociales -->
-                    <div class="mt-4">
-                        <button type="button" class="btn btn-dark"><i class="bi bi-instagram"></i></button>
-                        <button type="button" class="ms-1 btn btn-dark"><i class="bi bi-facebook"></i></button>
-                        <button type="button" class="ms-1 btn btn-dark"><i class="bi bi-twitter"></i></button>
-                    </div>
-
-                    <!-- Links navegación -->
-                    <div class="mt-4">
-                        <ul class="nav">
-                            <li class="nav-item"><a href="#" class="">Inicio</a></li>
-                            <li class="ms-3 nav-item"><a href="#" class="">Categorías</a></li>
-                            <li class="ms-3 nav-item"><a href="#" class="">Acceder</a></li>
-                            <li class="ms-3 nav-item"><a href="#" class="">Contacto</a></li>
-                        </ul>
                     </div>
                 </div>
 
-                <!-- Columna 2 -->
-                <div class="col-7 ps-4">
-
-                    <!-- Suscripcion boletin -->
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img"  src="img/slider1.jpg" alt="">        
                     <div class="container">
-                        <div class="col-7">
-                            <h5>Suscríbete a nuestro boletín...</h5>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Ingresa tu mail...">
-                                <button type="submit" class="btn btn-primary">Suscribirme</button>
+                    <div class="carousel-caption text-start">
+                        <h1>CASOS DE COVID AUMENTAN EXPLOSIVAMENTE</h1>
+                        <p>Según la OMS, hasta el 70% de la población mundial podría estar a punto de morir por COVID-21.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Leer más...</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones cambiar slide -->
+            <!-- Anterior slide -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarruselNoticias" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Noticia anterior</span>
+            </button>
+
+            <!-- Siguiente slide -->
+            <button class="carousel-control-next" type="button" data-bs-target="#CarruselNoticias" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente noticia</span>
+            </button>
+        </div>
+
+        <hr class="featurette-divider"> <!-- Separador de secciones -->
+
+
+        <hr class="featurette-divider"> <!-- Separador de secciones -->
+
+        <!-- Footer -->
+        <footer class="container">
+
+            <div class="container pt-3">
+                <div class="row">
+
+                    <!-- Columna 1 -->
+                    <div class="col-5 pe-5">
+
+                        <!-- Descripción about -->
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="img/logo.png" alt="" width="30" height="24">
+                            </div>
+                            <div class="col">
+                                <h3>Caos News</h3>
+                            </div>  
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda aliquid maxime temporibus quae.</p>
+                    
+                        <!-- Iconos sociales -->
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-dark"><i class="bi bi-instagram"></i></button>
+                            <button type="button" class="ms-1 btn btn-dark"><i class="bi bi-facebook"></i></button>
+                            <button type="button" class="ms-1 btn btn-dark"><i class="bi bi-twitter"></i></button>
+                        </div>
+
+                        <!-- Links navegación -->
+                        <div class="mt-4">
+                            <ul class="nav">
+                                <li class="nav-item"><a href="#" class="">Inicio</a></li>
+                                <li class="ms-3 nav-item"><a href="#" class="">Categorías</a></li>
+                                <li class="ms-3 nav-item"><a href="#" class="">Acceder</a></li>
+                                <li class="ms-3 nav-item"><a href="#" class="">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col-7 ps-4">
+
+                        <!-- Suscripcion boletin -->
+                        <div class="container">
+                            <div class="col-7">
+                                <h5>Suscríbete a nuestro boletín...</h5>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Ingresa tu mail...">
+                                    <button type="submit" class="btn btn-primary">Suscribirme</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Contáctanos -->
-                    <div class="container mt-4 mb-4">
-                        <h5>Contáctanos</h5>
-                        <p>Puedes contactarte con nosotros al número de teléfono +569 9999 9999 o escribirnos un correo electrónico al mail contacto@caosnews.cl</p>
-                        <p>También puedes enviarnos un mensaje a través del formulario de contacto presionando en el siguiente link:</p>
-                        <button type="button" class="btn btn-outline-info">Ir al formulario de contacto</button>
+                        <!-- Contáctanos -->
+                        <div class="container mt-4 mb-4">
+                            <h5>Contáctanos</h5>
+                            <p>Puedes contactarte con nosotros al número de teléfono +569 9999 9999 o escribirnos un correo electrónico al mail contacto@caosnews.cl</p>
+                            <p>También puedes enviarnos un mensaje a través del formulario de contacto presionando en el siguiente link:</p>
+                            <button type="button" class="btn btn-outline-info">Ir al formulario de contacto</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container mt-2">
+            <div class="container mt-2">
 
-            <!-- Año y marca -->
-            <p class="text-muted text-center">Caos News 2021 &copy; Todos los derechos reservados.</p>
-        </div>
+                <!-- Año y marca -->
+                <p class="text-muted text-center">Caos News 2021 &copy; Todos los derechos reservados.</p>
+            </div>
 
-    </footer>
+        </footer>
     </main>
 
     <!-- Bootstrap JS -->
