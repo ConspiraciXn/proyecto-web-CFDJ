@@ -22,22 +22,24 @@
 
     <!-- Barra de navegación -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-            <div class="container-fluid">
 
-                <!-- Logo con Título -->
+        <!-- Navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+            <div class="container-fluid d-flex flex-wrap">
+
+                
                 <a class="navbar-brand" href="#">
                     <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     Caos News
                 </a>
 
-                <!-- Botón menú responsivo -->
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Links menú -->
+                    
+                
                 <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i>Inicio</a>
@@ -47,15 +49,16 @@
                     </li>
                 </ul>
 
-                <!-- Buscador -->
+                 
                 <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Buscar noticias..." aria-label="Search">
                   <button class="btn btn-outline-info" type="submit"><i class="bi bi-search"></i></button>
                 </form>
             </div>
-        </nav>
+        </nav>-->
     </header>
 
+    <!-- Contenido principal -->
     <main class="flex-shrink-0">
         <div class="container">
 
@@ -80,18 +83,24 @@
                             <h3>Caos News</h3>
                         </div>  
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda aliquid maxime temporibus quae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda aliquid maxime temporibus quae.</p>
                 
                     <!-- Iconos sociales -->
-                    <button type="button" class="btn btn-dark"><i class="bi bi-instagram"></i></button>
-                    <button type="button" class="btn btn-dark"><i class="bi bi-facebook"></i></button>
-                    <button type="button" class="btn btn-dark"><i class="bi bi-twitter"></i></button>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-dark"><i class="bi bi-instagram"></i></button>
+                        <button type="button" class="ms-1 btn btn-dark"><i class="bi bi-facebook"></i></button>
+                        <button type="button" class="ms-1 btn btn-dark"><i class="bi bi-twitter"></i></button>
+                    </div>
 
                     <!-- Links navegación -->
-                    <ul class="nav">
-                        <li></li>
-                    </ul>
-
+                    <div class="mt-4">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="#" class="">Inicio</a></li>
+                            <li class="ms-3 nav-item"><a href="#" class="">Categorías</a></li>
+                            <li class="ms-3 nav-item"><a href="#" class="">Acceder</a></li>
+                            <li class="ms-3 nav-item"><a href="#" class="">Contacto</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Columna 2 -->
@@ -100,7 +109,7 @@
                     <!-- Suscripcion boletin -->
                     <div class="container">
                         <div class="col-7">
-                            <h4>Suscríbete a nuestro boletín...</h3>
+                            <h5>Suscríbete a nuestro boletín...</h5>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Ingresa tu mail...">
                                 <button type="submit" class="btn btn-primary">Suscribirme</button>
@@ -110,7 +119,7 @@
 
                     <!-- Contáctanos -->
                     <div class="container mt-4 mb-4">
-                        <h4>Contáctanos</h3>
+                        <h5>Contáctanos</h5>
                         <p>Puedes contactarte con nosotros al número de teléfono +569 9999 9999 o escribirnos un correo electrónico al mail contacto@caosnews.cl</p>
                         <p>También puedes enviarnos un mensaje a través del formulario de contacto presionando en el siguiente link:</p>
                         <button type="button" class="btn btn-outline-info">Ir al formulario de contacto</button>
