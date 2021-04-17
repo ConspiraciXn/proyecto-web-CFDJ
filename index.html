@@ -16,20 +16,20 @@
     <!-- Bootstrap Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 </head>
-<body>
+<body class="d-flex flex-column h-100">
 
     <!-- Cuerpo -->
 
     <!-- Barra de navegación -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
             <div class="container-fluid">
 
                 <!-- Logo con Título -->
                 <a class="navbar-brand" href="#">
                     <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     Caos News
-                  </a>
+                </a>
 
                 <!-- Botón menú responsivo -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <!-- Links menú -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i>Inicio</a>
                     </li>
@@ -56,6 +56,43 @@
         </nav>
     </header>
 
+    <main class="flex-shrink-0">
+        <div class="container">
+
+        </div>
+    </main>  
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light fixed-bottom">
+        <div class="container">
+
+            <div class="row">
+                <!-- Marca -->
+                <div class="col-6">
+                <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block">
+                <h3>Caos News</h3>
+                
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda aliquid maxime temporibus quae.</p>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="col-6">
+                    <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Caos News
+                    
+        
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda aliquid maxime temporibus quae.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Año y marca -->
+            <span class="text-muted">Caos News 2021 - Todos los derechos reservados.</span>
+        </div>
+
+    </footer>
 
     
     <!-- Bootstrap JS -->
