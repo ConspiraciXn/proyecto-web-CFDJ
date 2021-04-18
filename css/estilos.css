@@ -32,6 +32,13 @@ body {
   color: white;
 }
 
+.bg-celeste {
+  background-color: #314252;
+  color: white;
+}
+
+
+
   /* Carousel base class */
   .carousel {
     margin-bottom: 4rem;
