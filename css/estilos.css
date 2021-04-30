@@ -2,6 +2,19 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+i{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+li{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
