@@ -21,43 +21,10 @@
     <!-- Íconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
-    <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-
 </head>
 
 <!-- Cuerpo -->
 <body>
-
-    <!-- SACAR VALORES DOLAR,UF,EURO -->
-    <script>
-        $(document).ready(function() {
-            $.get("https://mindicador.cl/api/dolar",function(data){
-                var dolar = data.serie[0].valor;
-                $("#valor_dolar").html("<b>| Valor DOLAR: </b>"+dolar);
-
-            })
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://mindicador.cl/api/uf",function(data){
-                var uf = data.serie[0].valor;
-                $("#valor_uf").html("<b>| Valor UF: </b>"+uf);
-
-            })
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://mindicador.cl/api/euro",function(data){
-                var euro = data.serie[0].valor;
-                $("#valor_euro").html("<b>| Valor EURO: </b>"+euro);
-
-            })
-        });
-    </script>
-    
     <!-- Barra de navegación-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-celeste">
 
@@ -77,19 +44,13 @@
 
             <!-- Enlaces categorías (parte izquierda)-->
             <ul class="nav me-auto ms-4 nav-expand-lg nav-dark bg-celeste">
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-light px-2 active">Nacional</a></li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-light px-2">Internacional</a></li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-light px-2">Deporte</a></li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-light px-2">Economia</a></li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-light px-2">Cultura</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light px-2 active">Nacional</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light px-2">Internacional</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light px-2">Deporte</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light px-2">Economia</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light px-2">Cultura</a></li>
             </ul>
             
-
             <!-- Enlaces barra (parte derecha) --> 
             <div>
                 <ul class="navbar-nav nav-pills me-5 ms-5 mb-2 mb-md-0">
@@ -101,15 +62,8 @@
                     </li>
                 </ul>
             </div>
-             
-            
-            
-
         </div>
     </nav>
-
-
-    
 
     <!-- Contenido principal -->
     <main>
@@ -192,11 +146,9 @@
                     Categorías
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Nacional</a></li>
-                <li><a class="dropdown-item" href="#">Internacional</a></li>
-                <li><a class="dropdown-item" href="#">Deporte</a></li>
-                <li><a class="dropdown-item" href="#">Economia</a></li>
-                <li><a class="dropdown-item" href="#">Cultura</a></li>
+                <li><a class="dropdown-item" href="#">Elemento 1</a></li>
+                <li><a class="dropdown-item" href="#">Elemento 2</a></li>
+                <li><a class="dropdown-item" href="#">Elemento 3</a></li>
             </ul>
 
             <!-- Lista periodistas -->
@@ -238,12 +190,11 @@
                                 <h3>Caos News</h3>
                             </div>
                         </div>
-                        <p>Caos News nacio de un grupo de jovenes periodistas entuciastas, 
-                            buscando compartir noticias nacionales con una mirada fresca, 
-                            Su misión radica en la búsqueda de información, para lo cual 
-                            realizan investigaciones y entrevistas, analizando las opiniones e 
-                            impresiones de otras personas con la finalidad de reportar lo observado 
-                            y recopilado de una manera efectiva, oportuna y atractiva.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat ea mollitia cum
+                            inventore quidem necessitatibus id a libero ipsum ad aliquam enim commodi, illum assumenda
+                            aliquid maxime temporibus quae.</p>
 
                         <!-- Iconos sociales -->
                         <div class="mt-4">
@@ -288,16 +239,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- MOSTRAR VALORES VALOR DOLAR UF EURO --> 
-
-                <div>
-                    <ul class="nav">
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_dolar"></li>
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_uf"></li>
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_euro"></li>
-                    </ul>
-                </div>
-            
             </div>
 
             <div class="container mt-2">
