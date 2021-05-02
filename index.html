@@ -21,13 +21,78 @@
     <!-- Íconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
-    <!-- JQUERY -->
+    <!-- Jquery -->
     <script src="js/jquery-3.6.0.min.js"></script>
 
 </head>
 
 <!-- Cuerpo -->
 <body>
+
+    <!-- Modal de inicio de sesión #modal1 -->
+    <div class="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="etiquetaModal1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Header del modal -->
+                <div class="modal-header">
+                    <i class="bi bi-person-fill mt-1 me-2"></i>
+                    <h5 class="modal-title" id="etiquetaModal1">Inicio de sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputEmail">E-mail</span>
+                                <input type="email" class="form-control" required placeholder="Ingresa tu e-mail" aria-label="E-mail" aria-describedby="inputEmail">
+                            </div>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="inputContrasena">Contraseña</span>
+                                <input type="password" class="form-control" required placeholder="Ingresa tu contraseña" aria-label="Contraseña" aria-describedby="inputContrasena">
+                            </div>
+                            <input class="btn btn-success mb-4" type="submit" value="Iniciar sesión">
+                        </form>
+                        <p class="text-center">¿Quieres unirte al equipo <br> de CaosNews? <a href="#" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-dismiss="modal">¡Regístrate!</a></p>
+                    </div>                    
+                </div>
+
+                <!-- Footer del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-celeste" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de registro #modal2 -->
+    <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="etiquetaModal2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-dialog-centered">
+
+                <!-- Header del modal -->
+                <div class="modal-header">
+                    <i class="bi bi-person-fill mt-1 me-2"></i>
+                    <h5 class="modal-title" id="etiquetaModal2">Registro de nuevo usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center">
+                    <div class="container">
+                        
+                    </div>                    
+                </div>
+
+                <!-- Footer del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-celeste" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SACAR VALORES DOLAR,UF,EURO -->
     <script>
@@ -63,8 +128,7 @@
 
         <!-- Logo y título -->
         <a class="navbar-brand ms-5 mt-2" href="#">
-            <i class="fs-3 bi bi-newspaper d-inline-block "></i>
-            <p class="fs-3 d-inline-block ms-2">Caos News</p>
+            <img src="img/logoSmall.png" class="d-inline-block mb-1" alt="">
         </a>
 
         <!-- Botón responsivo -->
@@ -91,10 +155,11 @@
                         <a class="nav-link" aria-current="page" href="#"><i class="bi bi-house-door-fill me-2"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person-fill me-2"></i>Iniciar sesión</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal1" href="#"><i class="bi bi-person-fill me-2"></i>Iniciar sesión</a>
                     </li>
                 </ul>
             </div>
+            
         </div>
     </nav>
 
@@ -167,7 +232,7 @@
         <hr class="featurette-divider"> <!-- Separador de secciones -->
 
         <!-- Sección 2: Buscador de noticias -->
-        <div class="container  mb-3">
+        <div class="container mb-3">
             <h1 class="text-center">Buscar noticias</h1>
         </div>
 
@@ -204,7 +269,6 @@
 
         </div>
 
-
         <hr class="featurette-divider"> <!-- Separador de secciones -->
 
         <!-- Footer -->
@@ -219,16 +283,13 @@
                         <!-- Descripción about -->
                         <div class="row">
                             <div class="col-1">
-                                <img src="img/logo.png" alt="" width="30" height="24">
-                            </div>
-                            <div class="col">
-                                <h3>Caos News</h3>
+                                <img src="img/logoColor70px.png" class="mb-3" alt="">
                             </div>
                         </div>
-                        <p>Caos News nacio de un grupo de jovenes periodistas entuciastas, 
-                            buscando compartir noticias nacionales con una mirada fresca, 
+                        <p>Caos News nace de un grupo de jovenes periodistas entusiastas 
+                            buscando compartir noticias nacionales con una mirada fresca. 
                             Su misión radica en la búsqueda de información, para lo cual 
-                            realizan investigaciones y entrevistas, analizando las opiniones e 
+                            realizamos investigaciones y entrevistas, analizando las opiniones e 
                             impresiones de otras personas con la finalidad de reportar lo observado 
                             y recopilado de una manera efectiva, oportuna y atractiva.</p>
 
