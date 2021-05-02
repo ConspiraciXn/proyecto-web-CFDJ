@@ -25,6 +25,87 @@
 
 <!-- Cuerpo -->
 <body>
+
+    <!-- Modal de inicio de sesión #modal1 -->
+    <div class="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="etiquetaModal1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Header del modal -->
+                <div class="modal-header">
+                    <i class="bi bi-person-fill mt-1 me-2"></i>
+                    <h5 class="modal-title" id="etiquetaModal1">Inicio de sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center">
+                    <div class="container mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputEmail">E-mail</span>
+                                <input type="email" class="form-control" required placeholder="Ingresa tu e-mail" aria-label="E-mail" aria-describedby="inputEmail">
+                            </div>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="inputContrasena">Contraseña</span>
+                                <input type="password" class="form-control" required placeholder="Ingresa tu contraseña" aria-label="Contraseña" aria-describedby="inputContrasena">
+                            </div>
+                            <input class="btn-lg btn-celeste mb-4" type="submit" value="Iniciar sesión">
+                        </form>
+                        <p class="text-center">¿Quieres unirte al equipo <br> de CaosNews? <a href="#" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-dismiss="modal">¡Regístrate!</a></p>
+                    </div>                    
+                </div>
+
+                <!-- Footer del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-celeste" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de registro #modal2 -->
+    <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="etiquetaModal2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Header del modal -->
+                <div class="modal-header">
+                    <i class="bi bi-person-fill mt-1 me-2"></i>
+                    <h5 class="modal-title" id="etiquetaModal2">Registro de nuevo usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center">
+                    <div class="container mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputNombre">Nombre</span>
+                                <input type="text" class="form-control" required minlength="3" placeholder="Ingresa tu nombre" aria-label="Nombre" aria-describedby="inputNombre">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputEmail">E-mail</span>
+                                <input type="email" class="form-control" required placeholder="Ingresa tu e-mail" aria-label="E-mail" aria-describedby="inputEmail">
+                            </div>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="inputContrasena">Contraseña</span>
+                                <input type="password" class="form-control" required placeholder="Crea una contraseña" aria-label="Contraseña" aria-describedby="inputContrasena">
+                            </div>
+                            <input class="btn-lg btn-celeste mb-4" type="submit" value="Registrar">
+                        </form>
+                        <p class="text-center">¿Ya posees una cuenta en <br> de CaosNews? <a href="#" data-bs-toggle="modal" data-bs-target="#modal1" data-bs-dismiss="modal">¡Inicia sesión!</a></p>
+                    </div>                    
+                </div>
+
+                <!-- Footer del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-celeste" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Barra de navegación-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-celeste">
 
@@ -57,7 +138,7 @@
                         <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house-door-fill me-2"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person-fill me-2"></i>Iniciar sesión</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal1" href="#"><i class="bi bi-person-fill me-2"></i>Iniciar sesión</a>
                     </li>
                 </ul>
             </div>
@@ -117,7 +198,8 @@
                         <div class="mt-4">
                             <ul class="nav">
                                 <li class="nav-item"><a href="index.html" class="">Inicio</a></li>
-                                <li class="ms-3 nav-item"><a href="#" class="">Acceder</a></li>
+                                <li class="ms-3 nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#modal1" class="">Acceder</a></li>
+                                <li class="ms-3 nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#modal2" class="">Registro</a></li>
                                 <li class="ms-3 nav-item"><a href="#" class="">Contacto</a></li>
                             </ul>
                         </div>
