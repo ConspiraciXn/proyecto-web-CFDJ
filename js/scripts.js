@@ -18,5 +18,9 @@ function iniciarSesion() {
         "hideEasing": "linear",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
+    }
 }
+
+function crearVentana(url, titulo){
+window.open(url, titulo, "width=700, height=800")
 }
