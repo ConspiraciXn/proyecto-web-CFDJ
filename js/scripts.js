@@ -22,5 +22,37 @@ function iniciarSesion() {
 }
 
 function crearVentana(url, titulo){
-window.open(url, titulo, "width=700, height=800")
+    window.open(url, titulo, "width=700, height=800")
 }
+
+$(document).ready(function() {
+    $.get("https://mindicador.cl/api/dolar",function(data){
+    var dolar = data.serie[0].valor;
+    $("#valor_dolar").html(dolar);
+
+    })
+});
+
+$(document).ready(function() {
+    $.get("https://mindicador.cl/api/uf",function(data){
+    var uf = data.serie[0].valor;
+    $("#valor_uf").html(uf);
+
+    })
+});
+
+$(document).ready(function() {
+    $.get("https://mindicador.cl/api/euro",function(data){
+    var euro = data.serie[0].valor;
+    $("#valor_euro").html(euro);
+
+    })
+});
+
+$(document).ready(function() {
+    $.get("https://mindicador.cl/api/utm",function(data){
+    var utm = data.serie[0].valor;
+    $("#valor_utm").html(utm);
+
+    })
+});

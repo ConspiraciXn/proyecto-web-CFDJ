@@ -121,35 +121,6 @@
         </div>
     </div>
 
-    <!-- SACAR VALORES DOLAR,UF,EURO -->
-    <script>
-        $(document).ready(function() {
-            $.get("https://mindicador.cl/api/dolar",function(data){
-                var dolar = data.serie[0].valor;
-                $("#valor_dolar").html("<b>| Valor DOLAR: </b>"+dolar);
-
-            })
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://mindicador.cl/api/uf",function(data){
-                var uf = data.serie[0].valor;
-                $("#valor_uf").html("<b>| Valor UF: </b>"+uf);
-
-            })
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://mindicador.cl/api/euro",function(data){
-                var euro = data.serie[0].valor;
-                $("#valor_euro").html("<b>| Valor EURO: </b>"+euro);
-
-            })
-        });
-    </script>
-
     <!-- Barra de navegación-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-celeste">
 
@@ -327,6 +298,57 @@
 
         <hr class="featurette-divider"> <!-- Separador de secciones -->
 
+        <!-- Sección 3: Valores nacionales -->
+        <div class="container mb-3">
+            <h1 class="text-center">Valores nacionales</h1>
+        </div>
+
+        <div class="text-center">
+            <section id="counts" class="counts">
+                <div class="container aos-init aos-animate">
+          
+                  <div class="row">
+          
+                    <div class="col-lg-3 col-md-6">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_dolar" class="purecounter"></span>
+                        <p>Valor dolar</p>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_uf" class="purecounter"></span>
+                        <p>Valor UF</p>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_euro" class="purecounter"></span>
+                        <p>Valor Euro</p>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_utm" class="purecounter"></span>
+                        <p>Valor UTM</p>
+                      </div>
+                    </div>
+          
+                  </div>
+          
+                </div>
+              </section>
+        </div>
+
+        <hr class="featurette-divider"> <!-- Separador de secciones -->
+
         <!-- Footer -->
         <footer class="container">
 
@@ -392,18 +414,6 @@
                                     contacto</button></a>
                         </div>
                     </div>
-
-                        <!-- MOSTRAR VALORES VALOR DOLAR UF EURO --> 
-
-                <div>
-                    <ul class="nav">
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_dolar"></li>
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_uf"></li>
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_euro"></li>
-                    </ul>
-                </div>
-
-
                 </div>
             </div>
 
