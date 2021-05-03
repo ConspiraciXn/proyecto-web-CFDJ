@@ -51,7 +51,7 @@
                 <div class="contenedor-input pt-3">
                     <form>
                     <!-- Ingreso Titulo -->
-                          <div class="mb-3">
+                        <div class="mb-3">
                           <label for="Titulo" class="form-label">Titulo Noticia</label>
                           <input type="text" disabled readonly name="titulo" value="CASOS DE COVID AUMENTAN EXPLOSIVAMENTE" required minlength="20" pattern="{20,150}" class="form-control container-fluid" aria-describedby="titulo" title="solo letras entre 3 a 45 caracteres" required>
                           <div id="titulo" class="form-text"></div>
@@ -84,6 +84,12 @@
                             <span class="text">Cuerpo Noticia</span>
                             <textarea class="form-control" disabled readonly placeholder="El académico de la Facultad de Medicina y encargado del estudio de la vacuna del laboratorio Janssen en nuestro plantel hace un fuerte llamado a cumplir con el calendario de inmunizaciones establecido en sus dos dosis; “solo así la tercera ola que viene nos pegará menos fuerte que la primera”, señala." aria-label="CuerpoNoti" required minlength="1000" maxlength="3000" required></textarea>
                             <div id="CuerpoNoti" class="form-text"></div>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="autor" class="form-label">Autor Noticia</label>
+                            <input type="text" disabled readonly name="autor" value="Diego Orellana" required minlength="20" pattern="{20,150}" class="form-control container-fluid" aria-describedby="titulo" title="solo letras entre 3 a 45 caracteres" required>
+                            <div id="autor" class="form-text"></div>
                           </div>
 
                           <button type="button" class="btn btn-success"><i class="bi bi-check2 me-2"></i>Aprobar</button>
