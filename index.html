@@ -25,6 +25,13 @@
     <!-- Jquery -->
     <script src="js/jquery-3.6.0.min.js"></script>
 
+    <!-- Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <!-- Scripts propios -->
+    <script src="js/scripts.js"></script>
+
 </head>
 
 <!-- Cuerpo -->
@@ -45,6 +52,7 @@
                 <!-- Cuerpo del modal -->
                 <div class="modal-body text-center">
                     <div class="container mt-3">
+
                         <form>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputEmail">E-mail</span>
@@ -54,7 +62,7 @@
                                 <span class="input-group-text" id="inputContrasena">Contraseña</span>
                                 <input type="password" class="form-control" required placeholder="Ingresa tu contraseña" aria-label="Contraseña" aria-describedby="inputContrasena">
                             </div>
-                            <input class="btn-lg btn-celeste mb-4" type="submit" value="Iniciar sesión">
+                            <input class="btn-lg btn-celeste mb-4" onsubmit="iniciarSesion()" type="submit" value="Iniciar sesión">
                         </form>
                         <p class="text-center">¿Quieres unirte al equipo <br> de CaosNews? <a href="#" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-dismiss="modal">¡Regístrate!</a></p>
                     </div>                    
