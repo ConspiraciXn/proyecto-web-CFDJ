@@ -43,7 +43,7 @@
 
                 <!-- Cuerpo del modal -->
                 <div class="modal-body text-center">
-                    <div class="container">
+                    <div class="container mt-3">
                         <form>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputEmail">E-mail</span>
@@ -53,7 +53,7 @@
                                 <span class="input-group-text" id="inputContrasena">Contraseña</span>
                                 <input type="password" class="form-control" required placeholder="Ingresa tu contraseña" aria-label="Contraseña" aria-describedby="inputContrasena">
                             </div>
-                            <input class="btn btn-success mb-4" type="submit" value="Iniciar sesión">
+                            <input class="btn-lg btn-celeste mb-4" type="submit" value="Iniciar sesión">
                         </form>
                         <p class="text-center">¿Quieres unirte al equipo <br> de CaosNews? <a href="#" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-dismiss="modal">¡Regístrate!</a></p>
                     </div>                    
@@ -69,8 +69,8 @@
 
     <!-- Modal de registro #modal2 -->
     <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="etiquetaModal2" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
                 <!-- Header del modal -->
                 <div class="modal-header">
@@ -81,8 +81,23 @@
 
                 <!-- Cuerpo del modal -->
                 <div class="modal-body text-center">
-                    <div class="container">
-                        
+                    <div class="container mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputNombre">Nombre</span>
+                                <input type="text" class="form-control" required minlength="3" placeholder="Ingresa tu nombre" aria-label="Nombre" aria-describedby="inputNombre">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputEmail">E-mail</span>
+                                <input type="email" class="form-control" required placeholder="Ingresa tu e-mail" aria-label="E-mail" aria-describedby="inputEmail">
+                            </div>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="inputContrasena">Contraseña</span>
+                                <input type="password" class="form-control" required placeholder="Crea una contraseña" aria-label="Contraseña" aria-describedby="inputContrasena">
+                            </div>
+                            <input class="btn-lg btn-celeste mb-4" type="submit" value="Registrar">
+                        </form>
+                        <p class="text-center">¿Ya posees una cuenta en <br> de CaosNews? <a href="#" data-bs-toggle="modal" data-bs-target="#modal1" data-bs-dismiss="modal">¡Inicia sesión!</a></p>
                     </div>                    
                 </div>
 
@@ -93,6 +108,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- SACAR VALORES DOLAR,UF,EURO -->
     <script>
@@ -169,9 +185,9 @@
     <main>
         <!-- Noticia-->
         <div class="container-fluid">
-        <div class="container mt-3 pt-1">
+        <div class="container">
             <!-- Titulo Noticias 1 y Autor-->
-            <section class="col-md-12">
+            <section class="col-md-12 mb-4">
                 <div class="row">
                     <div class="col-sm-11 col-md-11 text-center">
                         <h2>
@@ -189,7 +205,7 @@
 
         <!-- Cuerpo Noticias-->
 
-        <div class="container-fluid pt-4 mt-3">
+        <div class="container-fluid pt-4 mt-3 ms-3">
             <!-- Bloque 1 texto lateral derecho -->
             <div class="row">
             <div class="col-sm-5 col-md-5 ms-3 me-4 mt-3">
@@ -222,7 +238,7 @@
         <div class="row">
         </div>
         <!-- Columna bloque 3 texto bajo -->
-        <div class="col-1 mt-3"></div>
+        <div class="col-1 mt-3 ms-3"></div>
             <div class="col-sm-11 col-md-11 ms-4 me-4 mt-1">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quos nemo accusamus. Porro ad
                 distinctio non reiciendis numquam culpa iure sint? Obcaecati, molestiae ducimus odit vel quae voluptatum
@@ -261,12 +277,12 @@
         </div>
         <hr class="featurette-divider mt-3"> <!-- Separador de secciones -->
 
-        <div class="container mb-3 mt-1 pt-1">
+        <div class="container mb-3">
             <h1 class="text-center pt-1">Noticias Relacionadas</h1>
         </div>
         </div>
         <!-- Carrusel Noticias Relacionadas -->
-        <div id="carouselExampleDark" class="carousel carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleDark" class="carousel carousel slide mt-5" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -344,8 +360,9 @@
                         <!-- Enlaces navegación -->
                         <div class="mt-4">
                             <ul class="nav">
-                                <li class="nav-item"><a href="#" class="">Inicio</a></li>
-                                <li class="ms-3 nav-item"><a href="#" class="">Acceder</a></li>
+                                <li class="nav-item"><a href="index.html" class="">Inicio</a></li>
+                                <li class="ms-3 nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#modal1" class="">Acceder</a></li>
+                                <li class="ms-3 nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#modal2" class="">Registro</a></li>
                                 <li class="ms-3 nav-item"><a href="#" class="">Contacto</a></li>
                             </ul>
                         </div>
@@ -376,18 +393,6 @@
                                     contacto</button></a>
                         </div>
                     </div>
-
-                        <!-- MOSTRAR VALORES VALOR DOLAR UF EURO --> 
-
-                <div>
-                    <ul class="nav">
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_dolar"></li>
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_uf"></li>
-                        <li style="color: rgb(21, 47, 80);margin-left: 2px ;" id ="valor_euro"></li>
-                    </ul>
-                </div>
-
-
                 </div>
             </div>
 
