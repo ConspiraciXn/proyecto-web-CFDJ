@@ -117,3 +117,28 @@ body {
     font-size: 3.5rem;
   }
 }
+
+/* Clases Form Noticia
+-------------------------------------------------- */
+
+#formulario{
+  background: white;
+  padding: 30px;
+}
+
+.form-titulo{
+  color: white;
+  background: #314252;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.form-registro{
+  background: white;
+  width: 80%;
+  margin: auto;
+  max-width: 2000px;
+  border-radius: 8px;
+  border:  #3f76a6;
+   }
