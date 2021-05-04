@@ -121,6 +121,47 @@
         </div>
     </div>
 
+    <!-- Modal de contacto #modal3 -->
+    <div class="modal fade" id="modal3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="etiquetaModal3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Header del modal -->
+                <div class="modal-header">
+                    <i class="bi bi-envelope-fill mt-1 me-2"></i>
+                    <h5 class="modal-title" id="etiquetaModal3">Contáctanos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center">
+                    <div class="container mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputNombre">Nombre</span>
+                                <input type="text" class="form-control" required minlength="3" placeholder="Ingresa tu nombre" aria-label="Nombre" aria-describedby="inputNombre">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputEmail">E-mail</span>
+                                <input type="email" class="form-control" required placeholder="Ingresa tu e-mail" aria-label="E-mail" aria-describedby="inputEmail">
+                            </div>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="inputMensaje">Mensaje</span>
+                                <input type="text" class="form-control pb-5 pt-5" required placeholder="Escribe tu mensaje" aria-label="Mensaje" aria-describedby="inputMensaje">
+                            </div>
+                            <input class="btn-lg btn-celeste mb-4" type="submit" value="Enviar">
+                        </form>
+                    </div>                    
+                </div>
+
+                <!-- Footer del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-celeste" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Barra de navegación-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-celeste">
 
@@ -181,7 +222,7 @@
                 <div class="card-footer text-center mt-3">
                     <button type="button" onclick="crearVentana('detalleNoticia.html', 'Revisión de Noticia')" class="btn-celeste"><i class="bi bi-box-arrow-up-right me-2"></i>Ver noticia</button>
                     <button type="button" class="btn btn-success"><i class="bi bi-check2 me-2"></i>Aprobar</button>
-                    <button type="button" class="btn btn-danger"><i class="bi bi-x-octagon-fill me-2"></i>Rechazar</button>
+                    <button type="button" onclick="crearVentana('motivoRechazo.html', 'Revisión de Noticia')" class="btn btn-danger"><i class="bi bi-x-octagon-fill me-2"></i>Rechazar</button>
                 </div>
             </div>
             
@@ -194,7 +235,7 @@
                 <div class="card-footer text-center mt-3">
                     <button type="button" onclick="crearVentana('detalleNoticia.html', 'Revisión de Noticia')" class="btn-celeste"><i class="bi bi-box-arrow-up-right me-2"></i>Ver noticia</button>
                     <button type="button" class="btn btn-success"><i class="bi bi-check2 me-2"></i>Aprobar</button>
-                    <button type="button" class="btn btn-danger"><i class="bi bi-x-octagon-fill me-2"></i>Rechazar</button>
+                    <button type="button" onclick="crearVentana('motivoRechazo.html', 'Revisión de Noticia')" class="btn btn-danger"><i class="bi bi-x-octagon-fill me-2"></i>Rechazar</button>
                 </div>
             </div>
             
@@ -207,7 +248,7 @@
                 <div class="card-footer text-center mt-3">
                     <button type="button" onclick="crearVentana('detalleNoticia.html', 'Revisión de Noticia')" class="btn-celeste"><i class="bi bi-box-arrow-up-right me-2"></i>Ver noticia</button>
                     <button type="button" class="btn btn-success"><i class="bi bi-check2 me-2"></i>Aprobar</button>
-                    <button type="button" class="btn btn-danger"><i class="bi bi-x-octagon-fill me-2"></i>Rechazar</button>
+                    <button type="button" onclick="crearVentana('motivoRechazo.html', 'Revisión de Noticia')" class="btn btn-danger"><i class="bi bi-x-octagon-fill me-2"></i>Rechazar</button>
                 </div>
             </div>
           </div>
@@ -277,7 +318,8 @@
                                 correo electrónico al mail contacto@caosnews.cl</p>
                             <p>También puedes enviarnos un mensaje a través del formulario de contacto presionando en el
                                 siguiente link:</p>
-                            <a href="#"><button type="button" class="btn-celeste">Ir al formulario de
+
+                            <a href="#"><button type="button" data-bs-toggle="modal" data-bs-target="#modal3" class="btn-celeste">Ir al formulario de
                                     contacto</button></a>
                         </div>
                     </div>
