@@ -190,3 +190,28 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
+
+  
+/* Noticias por autor
+-------------------------------------------------- */
+
+
+section.noticias-autor article h3 { 
+  color: #4E6C84; 
+  font-family: 'Droid Sans', sans-serif; 
+  font-size: 18px;  
+  font-weight: 700; 
+  line-height: 21px;}
+
+section.noticias-autor article h3 a { 
+  color: #4E6C84;}
+
+section.noticias-autor article h3 a:hover { 
+  color: #314252}
+
+section.noticias-autor article p { 
+  color: black; 
+  font-family: 'Droid Sans', sans-serif; 
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 23px;}
