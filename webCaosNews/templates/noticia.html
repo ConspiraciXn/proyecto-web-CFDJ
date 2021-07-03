@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+
+{% endblock css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+{% block contenido %}
+<div class="container-fluid mt-5 pb-5">
+    <div class="container">
+        <!-- Titulo Noticias y Autor-->
+        <section class="col-md-12 pt-5 mb-5">
+            <div class="row">
+                <div class="mt-4 col-sm-11 col-md-11 text-center">
+                    <h2>
+                        {{not.titulo}}
+                    </h2>
+                    <h5>
+                        {{not.lead}}
+                    </h5>
+                </div>
+                <p class="text-center col-sm-11 col-md-11"><em>Por</em> <span><a href="{% url 'index' %}" class="bi bi-person-fill me-3" rel="author">{{not.periodista}}</a></span> <span class="bi bi-calendar3 me-3">  {{not.fecha}}</span> <span class="bi bi-geo-alt-fill me-3">    Santiago, Chile</span> <span class="bi bi-bookmark-fill ">    {{not.Categoria.nombre}}</span></p>
+            </div>
+        </section>
+    </div>
+
+    <hr class="divider mt-auto"> <!-- Separador de secciones -->
+
+    <!-- Cuerpo Noticias-->
+    <div class="container-fluid pt-4 mt-3 ms-3 pb-4 mb-3">
+
+        <!-- Bloque 1 texto lateral derecho -->
+        <div class="row">
+        <div class="col-sm-5 col-md-5 ms-3 me-4 mt-3">
+            <p>{{not.cuerpo}}</p>
+
+        </div>
+
+        <!-- bloque 2 imagen -->
+        <div class="col-sm-6 col-md-6 ms-4 ps-4 me-2 mt-3">
+                <img src="{{not.imagen.url}}" style="filter: brightness(80%);" class="rounded img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider mt-auto"> <!-- Separador de secciones -->
+
+</div>
+
+<section>
+
+    <div class="container mb-3">
+        <h1 class="text-center">Galería de imágenes</h1>
+    </div>
+
+    <div class="container pb-5 pe-5 ps-5">
+        <div class="d-flex justify-content-end mb-4">
+            <div>
+            <label for="range" class="form-label"><span class="fw-bold">Tamaño de la galería: </span><span id="size">M</span></label>
+            <input type="range" class="form-range" id="range" min="1" max="5" value="3">
+            </div>
+        </div>
+        
+        <div class="row g-3 justify-content-center">
+            {% for reg in galeria %}
+            <div class="col col-4">
+            <img src="{{reg.imagen.url}}" class="img-fluid rounded">
+            </div>
+            {% endfor %}
+        </div>
+        </div>   
+</section>
+
+
+    
+{% endblock contenido %}
+
+{% block js %}
+
+<script>
+    window.onload =  () => {
+    let range = document.getElementById("range")
+    range.addEventListener("input", function (event) {
+      let col_size = event.target.value;
+      document.querySelectorAll(".row .col").forEach(col => {
+        var size, size_as_text;
+        switch (Number(col_size)) {
+          case 1:
+            size = 2;
+            size_as_text = "XS";
+            break;
+          case 2:
+            size = 3;
+            size_as_text = "S";
+            break;
+          case 3:
+            size = 4;
+            size_as_text = "M";
+            break;
+          case 4:
+            size = 6;
+            size_as_text = "L";
+            break;
+          case 5:
+            size = 12;
+            size_as_text = "XL";
+        }
+        col.className = "col col-" + size;
+        document.getElementById("size").innerText = size_as_text
+      })
+    })
+  }
+</script>
+{% endblock js %}

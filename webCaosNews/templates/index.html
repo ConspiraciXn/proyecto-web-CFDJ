@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block contenido %}
+
+    {% if messages %}
+        {% for message in messages %}
+
+        <script>
+            toastr.success('', '{{ message }}');
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+        </script> 
+        {% endfor %}
+    {% endif %}
+
+
+        <!-- Sección 1: Noticias destacadas -->
+        <!-- Carrusel -->
+        <div id="CarruselNoticias" class="carousel slide " data-bs-ride="carousel">
+            
+            <!-- Indicadores de carrusel -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Noticia 1"></button>
+                <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="1"
+                        aria-label="Noticia 2"></button>
+                <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="2"
+                        aria-label="Noticia 3"></button>
+                <button type="button" data-bs-target="#CarruselNoticias" data-bs-slide-to="3"
+                        aria-label="Noticia 4"></button>
+
+            </div>
+
+            <!-- Contenido del carrusel -->
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img class="bd-placeholder-img" style="filter: brightness(30%);" src="{% static 'img/slideractive.png'%}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1 class="display-2">Noticias destacadas</h1>
+                            <p class="lead">Desliza para ver las últimas noticias...</p>
+                            <h1 class="display-3"><i class="bi bi-arrow-right"></i></h1>
+                        </div>
+                    </div>
+                </div>
+
+                {% for reg in notcar %}
+
+                <!-- Elemento slider-->
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img" style="filter: brightness(30%);" src="{{reg.imagen.url}}"
+                            alt="">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>{{reg.titulo}}</h1>
+                            <p>{{reg.lead}}</p>
+                            <p><button class="btn-celeste" onclick="javascript:location.href='noticia/{{reg.id}}/'">Leer más...</button>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </div>
+
+            <!-- Botones cambiar slide -->
+            <!-- Anterior slide -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarruselNoticias"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Noticia anterior</span>
+            </button>
+
+            <!-- Siguiente slide -->
+            <button class="carousel-control-next" type="button" data-bs-target="#CarruselNoticias"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente noticia</span>
+            </button>
+        </div>
+
+        <hr class="featurette-divider" id="noticias"> <!-- Separador de secciones -->
+
+        <!-- Sección 2: Buscador de noticias + Noticias-->
+        <div class="container mb-3">
+            <h1 class="text-center">Filtrar noticias</h1>
+        </div>
+
+        <p class="text-center">Visualizando</p>
+        <p class="textoAzul fw-bold text-center display-6"> {{cant}}</p>
+        <p class="text-center">noticias</p>
+
+        <div class="justify-content-center row row-cols-auto text-center mt-5">
+
+            <div class="col text-end">
+                <!-- Lista categorías -->
+                <form action="{% url 'filtroCategoria' %}" method="POST">
+                    {% csrf_token %}
+                    
+                    <select class="btn-celeste" name="cboCategoria" id="cboCategoria" aria-placeholder="Selecciona una categoría...">
+                        {% for reg in cat %}
+                        <option value="{{reg.nombre}}">{{reg.nombre}}</option>
+                        {% endfor %}
+
+                    </select>
+                    <input class="btn-celeste" type="submit" value="Filtrar">
+                </form>
+            </div>
+
+            <div class="col text-center">
+                <form action="{% url 'filtroPalabraClave' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="btn-celeste" name="txtKeyword" id="txtKeyword" placeholder="Ingresa una palabra clave...">
+                    </input>
+                    <input class="btn-celeste" type="submit" value="Buscar">
+                </form>
+            </div>
+
+            <div class="col text-start">
+                <a href="{% url 'index' %}"><input type="button" class="btn-celeste px-5" value="Borrar filtros"></a>
+            </div>
+        </div>      
+
+        <!-- Noticias -->
+        <div class="container">
+        <div class="row row-cols-3 mt-5">
+
+            {% for reg in not %}
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <img src="{{reg.imagen.url}}" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{reg.titulo}}</h5>
+                        <p class="card-text">{{reg.lead}}</p>
+                    </div>
+                    <div class="card-footer text-center mt-3">
+                        <a href="/noticia/{{reg.id}}"><button type="button" class="btn-celeste">Seguir leyendo...</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+          </div>
+        </div>
+
+        <hr class="featurette-divider"> <!-- Separador de secciones -->
+
+        <!-- Sección 3: Valores nacionales -->
+        <div class="container mb-3">
+            <h1 class="text-center">Valores nacionales</h1>
+        </div>
+
+        <div class="text-center">
+            <section id="counts" class="counts">
+                <div class="container aos-init aos-animate">
+          
+                  <div class="row">
+          
+                    <div class="col-lg-3 col-md-6">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_dolar" class="purecounter"></span>
+                        <p>Valor dolar</p>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_uf" class="purecounter"></span>
+                        <p>Valor UF</p>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_euro" class="purecounter"></span>
+                        <p>Valor Euro</p>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                      <div class="count-box">
+                        <i class="bi bi-cash"></i>
+                        <span id="valor_utm" class="purecounter"></span>
+                        <p>Valor UTM</p>
+                      </div>
+                    </div>
+          
+                  </div>
+          
+                </div>
+              </section>
+        </div>
+    {% endblock contenido %}

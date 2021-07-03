@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+<div class="container mt-5 mb-5">
+<!-- Formulario Carga noticia -->
+<br>
+<section class="text-center mt-5" id="Bienvenida">
+  <h2 class="mt-5">Ingreso de Noticias</h2>
+  <p>Estimado colaborador, recuerda que todas las noticas son revisadas 
+      antes de publicar, por esto procura una redaccion coherente y precisa sobre la noticia enviada.</p>
+</section>
+
+<section id="formulario">
+
+  <form class="form-registro" id="formu" action="{% url 'formularioNoticia' %}" enctype="multipart/form-data" method="post" onsubmit="return Formulario()">
+    {% csrf_token %}                
+    <h2 class="form-titulo">Formulario</h2>
+    <div class="contenedor-input pt-3">
+        <form>
+        <!-- Ingreso Titulo -->
+              <div class="mb-3">
+              <label for="Titulo" class="form-label">Titulo Noticia</label>
+              <input type="text" name="txtTitulo" required minlength="20" pattern="{20,150}" class="form-control" aria-describedby="titulo" title="solo letras entre 3 a 45 caracteres" required>
+              <div id="titulo" class="form-text"></div>
+            </div>
+          <!-- Ingreso Sub-Titulo -->
+            <div class="mb-3">
+              <label for="Subtitulo" class="form-label">Lead Noticia</label>
+              <input type="text" name="txtLead" required minlength="20" pattern="{20,150}" class="form-control" id="sub" required>
+            </div>
+              <!-- Ingreso Categoria -->
+              <div class="mb-3">
+                    <label for="Categorias">Categorias</label>
+                    <select class="form-control" id="Cat" name="selCategoria" required>
+                        {% for reg in cat %}
+                        <option>{{reg.nombre}}</option>
+                        {% endfor %}
+                    </select>
+              </div>
+
+
+                <!-- Cargar Imagen-->
+                <div class="mb-3 pt-2">
+                    <label class="input" for="cimagen">Cargar Imagen Noticia</label>
+                    <input type="file" class="form-control" id="cimagen" name="inputImagen">
+                  </div>
+
+
+            <!-- Ingreso Cuerpo de la noticia -->
+
+            <div class="mb-3 mt-1">
+                <span class="text">Ingrese Noticia</span>
+                <textarea class="form-control" name="txtCuerpo" aria-label="CuerpoNoti" required minlength="1000" maxlength="3000" required></textarea>
+                <div id="CuerpoNoti" class="form-text"></div>
+              </div>
+
+            <!-- Boton Publicar -->
+            <input class="btn-celeste" type="submit" value="Enviar">
+            <!-- Boton Limpiar -->
+            <input class="btn-celeste" type="reset" value="Limpiar">
+
+            </div>
+          </form>
+
+          
+
+            {% if messages %}
+                {% for message in messages %}
+
+                <script>
+                    toastr.success('', '{{ message }}');
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
+                </script> 
+                {% endfor %}
+            {% endif %}
+
+    </div>
+  </div>
+{% endblock contenido %}
